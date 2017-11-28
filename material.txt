@@ -1,0 +1,46 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatButtonModule } from '@angular/material';
+
+import { AppComponent } from './app.component';
+
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule, FormsModule, HttpModule,
+    BrowserAnimationsModule,
+    MatButtonModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+-------------------------------------------------
+material.module.ts
+
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material';
+
+@NgModule({
+    import: [MatButtonModule],
+    export: [MatButtonModule]
+})
+
+export class MaterialModule{}
+--------------------------------------
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+---------------------------------------------------------
+<div>
+  <button mat-button>My Button</button>
+</div>
+---------------------------------
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
